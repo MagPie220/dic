@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="870ec3de-80dc-4622-8062-14e2725bfa02" name="Changes" comment="Словарики">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="870ec3de-80dc-4622-8062-14e2725bfa02" name="Changes" comment="Мапнул tot">
       <change beforePath="$PROJECT_DIR$/src/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DigitDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LatinDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LatinDictionary.java" afterDir="false" />
@@ -77,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715755277808</updated>
       <workItem from="1715755278849" duration="854000" />
-      <workItem from="1716553436669" duration="692000" />
+      <workItem from="1716553436669" duration="1119000" />
     </task>
     <task id="LOCAL-00001" summary="Словарики">
       <option name="closed" value="true" />
@@ -87,7 +86,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715756090135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Мапнул">
+      <option name="closed" value="true" />
+      <created>1716554217131</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554217131</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Мапнул tot">
+      <option name="closed" value="true" />
+      <created>1716554331376</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554331376</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Мапнул tot">
+      <option name="closed" value="true" />
+      <created>1716554347126</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716554347126</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +129,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Словарики" />
-    <option name="LAST_COMMIT_MESSAGE" value="Словарики" />
+    <MESSAGE value="Мапнул" />
+    <MESSAGE value="Мапнул tot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Мапнул tot" />
   </component>
 </project>

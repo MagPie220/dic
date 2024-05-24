@@ -21,4 +21,26 @@ public class LatinDictionary extends Dictionary {
     public boolean check_word(String word) {
         return word.matches(REGEX);
     }
+
+    @Override
+    public void put_word(String key, String value) {
+        if(check_word(value)){
+            dictionary.put(key, value);
+        }
+        else {
+            System.out.println("/////////////Ошибка при вводе ключа//////////////");
+        }
+    }
+
+    @Override
+    public void print_dictionary() {
+        for(Map.Entry<String, String> item:dictionary.entrySet()){
+            System.out.println(item.getKey() + "  " + item.getValue());
+        }
+    }
+
+    @Override
+    public String get_value(String key) {
+        return dictionary.get(key);
+    }
 }

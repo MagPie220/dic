@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.io.FileWriter;
+import java.io.FileReader;
 public class DigitDictionary extends Dictionary{
     public DigitDictionary(){
         REGEX = "[0-9]{5}$";
@@ -47,12 +49,53 @@ public class DigitDictionary extends Dictionary{
     @Override
     public void save_dictionary(String path) {
         try {
-            File file_dictionary = new File(path);
-            if(!file_dictionary.exists())
-                file_dictionary.createNewFile();
+            FileWriter file_dictionary = new FileWriter(path);
+            for(Map.Entry<String, String> item:dictionary.entrySet()){
+                file_dictionary.write(item.getKey() + " " + item.getValue() + "\n");
+            }
+            file_dictionary.close();
+            System.out.println("Файл успешно создан, а словарь записан");
         }
         catch (IOException e){
             System.out.println("Ошибка создания файла");
+        }
+    }
+
+    @Override
+    public void replace_word(String old_key, String new_value) {
+        if(check_word(new_value)){
+            dictionary.replace(old_key, new_value);
+        }
+        else {
+            System.out.println("/////////////Ошибка при вводе ключа//////////////");
+        }
+    }
+
+    @Override
+    public void open_dictionary(String path) {
+        try(FileReader reader = new FileReader(path))
+        {
+            int c;
+            String s = "";
+            while((c=reader.read())!=-1) s+=(char)c;
+            String[] words = s.split(" ");
+            if(words.length < 2)
+                return;
+
+            for(int i = 1; i < words.length; i = i + 2)
+            {
+                if(!check_word(words[i])){
+                    System.out.println("Вы открыли латинский словарь!");
+                    System.out.println(words[i]);
+                    break;
+                }
+                put_word(words[i-1], words[i]);
+            }
+            print_dictionary();
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
         }
     }
 }

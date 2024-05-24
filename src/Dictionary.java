@@ -10,4 +10,6 @@ public abstract class Dictionary {
     public abstract void print_dictionary();
     public abstract String get_value(String key);
     public abstract void save_dictionary(String path);
+    public abstract void replace_word(String old_key, String new_value);
+    public abstract void open_dictionary(String path);
 }

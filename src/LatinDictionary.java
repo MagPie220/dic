@@ -1,3 +1,6 @@
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,5 +45,57 @@ public class LatinDictionary extends Dictionary {
     @Override
     public String get_value(String key) {
         return dictionary.get(key);
+    }
+
+    @Override
+    public void save_dictionary(String path) {
+        try {
+            FileWriter file_dictionary = new FileWriter(path);
+            for(Map.Entry<String, String> item:dictionary.entrySet()){
+                file_dictionary.write(item.getKey() + " " + item.getValue() + "\n");
+            }
+            file_dictionary.close();
+            System.out.println("Файл успешно создан, а словарь записан");
+        }
+        catch (IOException e){
+            System.out.println("Ошибка создания файла");
+        }
+    }
+
+    @Override
+    public void replace_word(String old_key, String new_value) {
+        if(check_word(new_value)){
+            dictionary.replace(old_key, new_value);
+        }
+        else {
+            System.out.println("/////////////Ошибка при вводе ключа//////////////");
+        }
+    }
+
+    @Override
+    public void open_dictionary(String path) {
+        try(FileReader reader = new FileReader(path))
+        {
+            int c;
+            String s = "";
+            while((c=reader.read())!=-1) s+=(char)c;
+            String[] words = s.split(" ");
+            if(words.length < 2)
+                return;
+
+            for(int i = 1; i < words.length; i = i + 2)
+            {
+                if(!check_word(words[i])){
+                    System.out.println("Вы открыли циферный словарь!");
+                    return;
+                }
+                put_word(words[i-1], words[i]);
+            }
+            print_dictionary();
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
     }
 }

@@ -9,4 +9,5 @@ public abstract class Dictionary {
     public abstract void put_word(String key, String value);
     public abstract void print_dictionary();
     public abstract String get_value(String key);
+    public abstract void save_dictionary(String path);
 }

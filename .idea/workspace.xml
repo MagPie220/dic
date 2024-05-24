@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DigitDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LatinDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LatinDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715755277808</updated>
       <workItem from="1715755278849" duration="854000" />
-      <workItem from="1716553436669" duration="4909000" />
+      <workItem from="1716553436669" duration="7363000" />
     </task>
     <task id="LOCAL-00001" summary="Словарики">
       <option name="closed" value="true" />
@@ -135,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716554741637</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="гетеры сетеры">
+      <option name="closed" value="true" />
+      <created>1716558818188</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716558818188</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 public class DigitDictionary extends Dictionary{
@@ -34,13 +35,24 @@ public class DigitDictionary extends Dictionary{
 
     @Override
     public void print_dictionary() {
-        for(Map.Entry<String, String> item:dictionary.entrySet()){
+        for(Map.Entry<String, String> item:dictionary.entrySet())
             System.out.println(item.getKey() + "  " + item.getValue());
-        }
     }
 
     @Override
     public String get_value(String key) {
         return dictionary.get(key);
+    }
+
+    @Override
+    public void save_dictionary(String path) {
+        try {
+            File file_dictionary = new File(path);
+            if(!file_dictionary.exists())
+                file_dictionary.createNewFile();
+        }
+        catch (IOException e){
+            System.out.println("Ошибка создания файла");
+        }
     }
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="870ec3de-80dc-4622-8062-14e2725bfa02" name="Changes" comment="вроде сделал дикты">
+    <list default="true" id="870ec3de-80dc-4622-8062-14e2725bfa02" name="Changes" comment="saveOpen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DigitDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitDictionary.java" afterDir="false" />
@@ -94,7 +94,8 @@
       <updated>1715755277808</updated>
       <workItem from="1715755278849" duration="854000" />
       <workItem from="1716553436669" duration="7363000" />
-      <workItem from="1716571209238" duration="6401000" />
+      <workItem from="1716571209238" duration="6422000" />
+      <workItem from="1716730710710" duration="4389000" />
     </task>
     <task id="LOCAL-00001" summary="Словарики">
       <option name="closed" value="true" />
@@ -152,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716571263583</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="saveOpen">
+      <option name="closed" value="true" />
+      <created>1716577683631</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716577683631</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +184,7 @@
     <MESSAGE value="Мапнул tot" />
     <MESSAGE value="гетеры сетеры" />
     <MESSAGE value="вроде сделал дикты" />
-    <option name="LAST_COMMIT_MESSAGE" value="вроде сделал дикты" />
+    <MESSAGE value="saveOpen" />
+    <option name="LAST_COMMIT_MESSAGE" value="saveOpen" />
   </component>
 </project>

@@ -51,8 +51,9 @@ public class LatinDictionary extends Dictionary {
     public void save_dictionary(String path) {
         try {
             FileWriter file_dictionary = new FileWriter(path);
+            file_dictionary.write("ЛАТИНСКИЙ ");
             for(Map.Entry<String, String> item:dictionary.entrySet()){
-                file_dictionary.write(item.getKey() + " " + item.getValue() + "\n");
+                file_dictionary.write(item.getKey() + " " + item.getValue() + " ");
             }
             file_dictionary.close();
             System.out.println("Файл успешно создан, а словарь записан");
@@ -73,29 +74,35 @@ public class LatinDictionary extends Dictionary {
     }
 
     @Override
-    public void open_dictionary(String path) {
+    public Map<String,String> open_dictionary(String path) {
+        Map<String, String> dict = new HashMap<String, String>();
         try(FileReader reader = new FileReader(path))
         {
             int c;
             String s = "";
             while((c=reader.read())!=-1) s+=(char)c;
             String[] words = s.split(" ");
-            if(words.length < 2)
-                return;
-
-            for(int i = 1; i < words.length; i = i + 2)
-            {
-                if(!check_word(words[i])){
-                    System.out.println("Вы открыли циферный словарь!");
-                    return;
-                }
-                put_word(words[i-1], words[i]);
+            if(words[0].matches("ЦИФЕРНЫЙ")){
+                System.out.println("Вы пытаетесь открыть некоректный словарь");
+                return dict;
             }
-            print_dictionary();
+
+            for(int i = 0; i < words.length; i = i + 2)
+            {
+                dict.put(words[i], words[i+1]);
+            }
         }
         catch(IOException ex){
 
             System.out.println(ex.getMessage());
         }
+        finally {
+            return dict;
+        }
+    }
+
+    @Override
+    public void set_dictionary(Map<String, String> dict) {
+        dictionary = dict;
     }
 }

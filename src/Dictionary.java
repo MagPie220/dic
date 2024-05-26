@@ -11,5 +11,6 @@ public abstract class Dictionary {
     public abstract String get_value(String key);
     public abstract void save_dictionary(String path);
     public abstract void replace_word(String old_key, String new_value);
-    public abstract void open_dictionary(String path);
+    public abstract Map<String, String> open_dictionary(String path);
+    public abstract void set_dictionary(Map<String, String> dictionary);
 }

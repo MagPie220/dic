@@ -45,7 +45,7 @@ public class Main {
                             case (5):
                                 System.out.println("Введите имя словаря");
                                 String path_digit_open = scanner.next();
-                                digitDictionary.open_dictionary(path_digit_open);
+                                digitDictionary.set_dictionary(digitDictionary.open_dictionary(path_digit_open));
                                 break;
                         }
                         break;
@@ -82,7 +82,7 @@ public class Main {
                             case (5):
                                 System.out.println("Введите имя словаря");
                                 String path_latin_open = scanner.next();
-                                digitDictionary.open_dictionary(path_latin_open);
+                                latinDictionary.set_dictionary(latinDictionary.open_dictionary(path_latin_open));
                                 break;
                         }
                         break;
